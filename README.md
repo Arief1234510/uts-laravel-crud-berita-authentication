@@ -1,57 +1,50 @@
-# UTS Laravel - CRUD Berita + Authentication
+UTS Laravel - CRUD Berita + Authentication
+Deskripsi
+Project ini merupakan tugas UTS mata kuliah Framework yang dibuat menggunakan Laravel. Aplikasi ini memiliki fitur autentikasi login serta manajemen berita khusus untuk admin menggunakan template Black Dashboard.
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Fitur Utama
+Login & Register: Menggunakan Laravel Breeze.
 
-## Deskripsi
-Project ini merupakan tugas UTS mata kuliah Framework yang dibuat menggunakan Laravel. 
-Aplikasi ini memiliki fitur autentikasi login serta manajemen berita khusus untuk admin.
+Middleware Admin: Proteksi route menggunakan role admin.
 
----
+CRUD Berita: Manajemen berita (Tambah, Edit, Hapus).
 
-## Fitur Utama
-- Login & Register (Laravel Breeze)
-- Middleware Admin (is_admin)
-- CRUD Berita (Tambah, Edit, Hapus)
-- Upload Gambar Berita
-- Dashboard Admin (Black Dashboard Template)
+Upload Gambar: Fitur unggah gambar berita ke storage.
 
----
+Dashboard Admin: Menggunakan Black Dashboard Template.
 
-## Cara Menjalankan Project
-
-1. Clone repository
-```bash
-git clone [https://github.com/Arief1234510/uts-laravel-crud-berita-authentication.git](https://github.com/Arief1234510/uts-laravel-crud-berita-authentication.git)
-Masuk ke folder project
+Cara Menjalankan Project
+Clone repository
 
 Bash
+git clone https://github.com/Arief1234510/uts-laravel-crud-berita-authentication.git
 cd uts-laravel-crud-berita-authentication
-Install dependency
+Install Dependencies
 
 Bash
 composer install
-Copy file environment
+npm install && npm run build
+Konfigurasi Environment
 
 Bash
 cp .env.example .env
-Generate key
-
-Bash
 php artisan key:generate
-Jalankan migration + seeder
+Buka file .env dan pastikan konfigurasi database (DB_DATABASE, DB_USERNAME, dll) sudah sesuai dengan MySQL Anda.
+
+Migrasi & Seeder
 
 Bash
 php artisan migrate --seed
-Link storage (untuk gambar)
+Link Storage (PENTING: Agar Gambar Muncul)
 
 Bash
 php artisan storage:link
-Jalankan server
+Jalankan Server
 
 Bash
 php artisan serve
 Login Admin
-Gunakan akun berikut untuk mengakses dashboard admin:
+Gunakan akun berikut untuk mengakses dashboard admin setelah berhasil menjalankan seeder:
 
 Email: admin@gmail.com
 
