@@ -1,51 +1,50 @@
-UTS Laravel - CRUD Berita + Authentication
-Deskripsi
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20Logo%20Vertical/1%20Full%20Color/laravel-logolockup-vertical-full-color.svg" width="200" alt="Laravel Logo"></a></p>
+
+# UTS Laravel - CRUD Berita + Authentication
+
+## Deskripsi
 Project ini merupakan tugas UTS mata kuliah Framework yang dibuat menggunakan Laravel. Aplikasi ini memiliki fitur autentikasi login serta manajemen berita khusus untuk admin menggunakan template Black Dashboard.
 
-Fitur Utama
-Login & Register: Menggunakan Laravel Breeze.
+## Fitur Utama
+* **Login & Register**: Menggunakan Laravel Breeze.
+* **Middleware Admin**: Proteksi route menggunakan role `admin`.
+* **CRUD Berita**: Manajemen berita (Tambah, Edit, Hapus).
+* **Upload Gambar**: Fitur unggah gambar berita ke storage.
+* **Dashboard Admin**: Menggunakan Black Dashboard Template.
 
-Middleware Admin: Proteksi route menggunakan role admin.
+## Cara Menjalankan Project
 
-CRUD Berita: Manajemen berita (Tambah, Edit, Hapus).
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/Arief1234510/uts-laravel-crud-berita-authentication.git
+   cd uts-laravel-crud-berita-authentication
+   ```
+2. **Install Dependencies**
+   ```bash
+   composer install
+   npm install && npm run build
+   ```
+3. **Konfigurasi Environment**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+4. **Migrasi & Seeder**
+   ```bash
+   php artisan migrate --seed
+   ```
+5. **Link Storage**
+   ```bash
+   php artisan storage:link
+   ```
+6. **Jalankan Server**
+   ```bash
+   php artisan serve
+   ```
 
-Upload Gambar: Fitur unggah gambar berita ke storage.
-
-Dashboard Admin: Menggunakan Black Dashboard Template.
-
-Cara Menjalankan Project
-Clone repository
-
-Bash
-git clone https://github.com/Arief1234510/uts-laravel-crud-berita-authentication.git
-cd uts-laravel-crud-berita-authentication
-Install Dependencies
-
-Bash
-composer install
-npm install && npm run build
-Konfigurasi Environment
-
-Bash
-cp .env.example .env
-php artisan key:generate
-Buka file .env dan pastikan konfigurasi database (DB_DATABASE, DB_USERNAME, dll) sudah sesuai dengan MySQL Anda.
-
-Migrasi & Seeder
-
-Bash
-php artisan migrate --seed
-Link Storage (PENTING: Agar Gambar Muncul)
-
-Bash
-php artisan storage:link
-Jalankan Server
-
-Bash
-php artisan serve
-Login Admin
+### Login Admin:
+```
 Gunakan akun berikut untuk mengakses dashboard admin setelah berhasil menjalankan seeder:
-
 Email: admin@gmail.com
-
 Password: admin12345
+```
