@@ -44,7 +44,7 @@ Project ini merupakan tugas UTS mata kuliah Framework yang dibuat menggunakan La
 
 ### Login Admin:
 ```
-Gunakan akun berikut untuk mengakses dashboard admin setelah berhasil menjalankan seeder:
+Gunakan akun berikut untuk mengakses dashboard admin:
 Email: admin@gmail.com
 Password: admin12345
 ```
