@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
         'email' => 'test@example.com',
     ]);
 
-    // 🔥 TAMBAHKAN INI
     $this->call(AdminSeeder::class);
     }
 }
